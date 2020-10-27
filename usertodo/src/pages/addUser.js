@@ -8,7 +8,6 @@ const AddUser = (props) => {
   const [name, setName] = useState();
   const [age, setAge] = useState();
   const [type, setType] = useState();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     props.dispatch(addData(name, age, type));
@@ -88,5 +87,4 @@ const AddUser = (props) => {
     </>
   );
 };
-
 export default connect()(AddUser);

@@ -1,34 +1,41 @@
-
+// import { ADD_DATA } from "../Action/Action";
 const initialState = {
   data: [
     {
-      name:"kaushik",
-      age:"21",
-      type:"manager"
-    }
+      message: "vmn",
+      id: "",
+    },
   ],
 };
-
+debugger
 const UserTodo = (state = initialState, action) => {
-  debugger
-  switch (action.type) {
-    case "ADD_DATA":
-      return {
-        ...state,
-        data: [
-          ...state.data,
-          {
-            name: state.data[].name,
-            age: state.data[].age,
-            type: state.data[].type, 
-            },
-          ],
-        };
+  console.log(action,"all the actions")
+  // switch (action.type) {
+  //   case "ADD_DATA":
+  //     debugger
+  //     return {
+  //       ...state,
+  //       data: [
+  //         ...state.data,
+  //         {
+  //           message: action.message,
+  //           id: action.id,
+  //           // name: state.data[0].name,
+  //           // age: state.data[].age,
+  //           // type: state.data[].type, 
+  //           },
+  //         ],
+  //         data: [action.post, ...state.posts],
+  //       };
      
-      default:
+      // default:
         return state;
-    }
+    // }
   };
   export default UserTodo;
   
+
+  
+
+
   

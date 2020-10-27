@@ -15,7 +15,7 @@ const Home = () => {
             </button>
             <div className="dropdown-menu ">
                 <a className="dropdown-item" href="# "> <Link to="/adduser" >Add Manager</Link></a>
-                <a className="dropdown-item" href="# ">Add Employee</a>
+                <a className="dropdown-item" href="# "><Link to="/adduser" >Add Employee</Link></a>
             </div>
         </div>
         <div className="btn-group d-flex">
@@ -24,7 +24,7 @@ const Home = () => {
             </button>
             <div className="dropdown-menu ">
                 <a className="dropdown-item" href="# "> <Link to="/viewuser">View Manager</Link></a>
-                <a className="dropdown-item" href="# ">View Employee</a>
+                <a className="dropdown-item" href="# "><Link to="/viewuser">View Employee</Link></a>
             </div>
         </div>
         </div>
