@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { deleteTodo } from "../../actions";
 import Home from "../../Pages/Home";
 const List = (props) => {
+  // const Data = JSON.parse(localStorage.getItem('Data'))  
+  // debugger
   return (
     <>
       <Home />
@@ -29,13 +31,30 @@ const List = (props) => {
                       <button
                         className="btn btn-secondary active btn-md"
                         onClick={() => props.dispatch(deleteTodo(todo.id))}
-                      >
+                        >
                         Delete
                       </button>
                     </th>
                   </tr>
                 </tbody>
               )}
+              {/* {Data && Data.type === "manager" &&todo.type === "manager"&& props.myProps === "manager" && (
+                <tbody key={index}>
+                  <tr className="textstyle">
+                    <th>{Data.name}</th>
+                    <th>{Data.age}</th>
+                    <th>{Data.type}</th>
+                    <th> 
+                       <button
+                        className="btn btn-secondary active btn-md"
+                        onClick={() => props.dispatch(deleteTodo(todo.id))}
+                        >
+                        Delete
+                      </button> 
+                     </th>
+                  </tr>
+                </tbody>
+              )} */}
               {todo.type === "employee" && props.myProps === "employee" && (
                 <tbody key={index}>
                   <tr className="textstyle">
@@ -55,11 +74,7 @@ const List = (props) => {
               )}
             </>
           ))}
-          {/* {props.todos.map((todo, index) => (
-            <>
-              
-            </>
-          ))} */}
+          
         </table>
       </div>
     </>

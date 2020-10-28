@@ -20,6 +20,7 @@ const AddTodo = (props) => {
         onSubmit={(event) => {
           event.preventDefault();
           props.dispatch(addTodo(Data));
+          // localStorage.setItem('Data',JSON.stringify(Data));
           setData({
             name: "",
             age: "",

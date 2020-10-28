@@ -19,10 +19,9 @@ const todos = (state = initialState, action) => {
   
   switch (action.type) {
     case "ADD_TODO":
-      
-      
       return {
         data: [action.data, ...state.data],
+        // localStorage.setItem('data',JSON.stringify(data)),
       };
     case "DELETE_TODO":
       const todos = state.data.filter((todo) => todo.id !== action.id);
