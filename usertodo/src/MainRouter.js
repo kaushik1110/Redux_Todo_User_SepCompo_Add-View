@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import addUser from "./pages/addUser";
-import Home from "./pages/Home";
-import viewUser from "./pages/viewUser";
+import List from "./components/List/List";
+import AddTodo from "./components/AddTodo/AddTodo";
+import Home from "./Pages/Home";
 
 const MainRouter = () => {
   return (
@@ -10,8 +10,10 @@ const MainRouter = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/adduser" component={addUser} />
-          <Route exact path="/viewuser" component={viewUser}/>
+          <Route exact path="/add" component={AddTodo} />
+          <Route exact path="/list" component={()=><List myProps="manager"/>}  />
+          <Route exact path="/employeelist" component={()=><List myProps="employee"/>}  />
+          
         </Switch>
       </BrowserRouter>
     </div>

@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
-import Home from './pages/Home';
-
+import AddTodo from './components/AddTodo/AddTodo';
+import List from './components/List/List'
+import MainRouter from './MainRouter';
 function App() {
   return (
     <div className="App">
-      <Home/>
+      {/* <AddTodo/> */}
+      <MainRouter />
+      {/* <List/>  */}
     </div>
   );
 }

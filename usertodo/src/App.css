@@ -1,41 +1,36 @@
-.dropbox{
-  justify-content: center;
-  margin-top: 50px;
-}
-.addform{
-  margin-top: 30px;
-}
-.bsubmit{
-    margin-left: 58px;
-}
-.addtable {
-  margin-top: 45px;
-  border: 2px solid black;
-}
-.textadd{
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-.selectdata{
-  margin-top: 35px;
-}
 .nameset{
   display: flex;
   justify-content: center;
   margin-top: 15px;
   margin-right: 8px;
 }
-.infotable{
+.selectdata{
+  margin-top: 35px;
   justify-content: center;
-  display: grid;
-  margin-top: 33px;
-  margin-right: 30px;
 }
-.infoname{
-  margin-left: 50px;
+.formset{
+  margin-top: 20px;
+  margin-right: 51px;
 }
-
+.fntsize{
+  font-size: large;
+}
+.addtable {
+  margin-top: 45px;
+  border: 2px solid black;
+}
+.btnset{
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: 181px;
+  margin-top: -5px;
+}
+.tableset{
+  margin-top: 30px;
+}
+.textstyle{
+  font-style: oblique;
+}
 .App {
   text-align: center;
 }
