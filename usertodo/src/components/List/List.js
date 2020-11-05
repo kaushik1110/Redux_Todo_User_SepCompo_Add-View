@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { deleteTodo } from "../../actions";
 import Home from "../../Pages/Home";
 const List = (props) => {
+  // debugger
   // const Data = JSON.parse(localStorage.getItem('Data'))  
   // debugger
   return (
@@ -13,6 +14,7 @@ const List = (props) => {
         <table className="table table-bordered">
           <thead>
             <tr className="fntsize">
+              <th scope="col">ID</th>
               <th scope="col">Name</th>
               <th scope="col">Age</th>
               <th scope="col">Type</th>
@@ -24,6 +26,7 @@ const List = (props) => {
               {todo.type === "manager" && props.myProps === "manager" && (
                 <tbody key={index}>
                   <tr className="textstyle">
+                    <th>{todo.id}</th>
                     <th>{todo.name}</th>
                     <th>{todo.age}</th>
                     <th>{todo.type}</th>
@@ -58,6 +61,7 @@ const List = (props) => {
               {todo.type === "employee" && props.myProps === "employee" && (
                 <tbody key={index}>
                   <tr className="textstyle">
+                    <th>{todo.id}</th>
                     <th>{todo.name}</th>
                     <th>{todo.age}</th>
                     <th>{todo.type}</th>
@@ -80,7 +84,7 @@ const List = (props) => {
     </>
   );
 };
-
+// debugger
 const mapStateToProps = (state) => ({
   todos: state.todos.data,
 });

@@ -2,13 +2,13 @@ const initialState = {
   data: [
     {
       name: "kaushik",
-      age: 21,
+      age: 1234,
       type: "manager",
       id: "3",
     },
     {
       name: "vmn",
-      age: 22,
+      age: 1233,
       type: "employee",
       id: "4",
     },

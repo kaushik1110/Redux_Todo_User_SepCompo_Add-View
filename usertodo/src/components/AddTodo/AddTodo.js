@@ -5,10 +5,26 @@ import Home from "../../Pages/Home";
 import "../../App.css";
 const AddTodo = (props) => {
   const [Data, setData] = useState({
+    id: Math.floor(Math.random()*10000),
     name: "",
     age: "",
     type: "",
   });
+  const onSubmit = (value) => {
+    value.preventDefault();
+  // const Data = {
+  //           id: Math.floor(Math.random()*10000),
+  //           name: value.name,
+  //           age: value.age,
+  //           type: value.type,
+  //        };
+        props.dispatch(addTodo(Data));
+        setData({
+          name: "",
+          age: "",
+          type: "",
+        })
+  }
   
   return (
     <>
@@ -17,16 +33,24 @@ const AddTodo = (props) => {
         <h3 className="textadd mt-3">Add User Details</h3>
       <form
         className="formset"
-        onSubmit={(event) => {
-          event.preventDefault();
-          props.dispatch(addTodo(Data));
-          // localStorage.setItem('Data',JSON.stringify(Data));
-          setData({
-            name: "",
-            age: "",
-            type: "",
-          })
-        }}
+        onSubmit={onSubmit}
+        // onSubmit={(event) => {
+        //   debugger
+        //   event.preventDefault();
+        // //   const Data = {
+        // //     id: Math.floor(Math.random()*10000),
+        // //     name: event.name,
+        // //     age: event.age,
+        // //     type: event.type,
+        // //  };
+        //   props.dispatch(addTodo(Data));
+        //   // localStorage.setItem('Data',JSON.stringify(Data));
+        //   setData({
+        //     name: "",
+        //     age: "",
+        //     type: "",
+        //   })
+        // }}
       >
          <div className="form-group row">
         <label className="col-sm-2 col-form-label">Name</label>
