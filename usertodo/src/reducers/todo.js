@@ -2,15 +2,15 @@ const initialState = {
   data: [
     {
       name: "kaushik",
-      age: 1234,
+      age: 21,
       type: "manager",
-      id: "3",
+      id: "1234",
     },
     {
       name: "vmn",
-      age: 1233,
+      age: 22,
       type: "employee",
-      id: "4",
+      id: "1235",
     },
   ],
 };
